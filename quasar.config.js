@@ -55,7 +55,9 @@ module.exports = configure(function (ctx) {
 
       // transpile: false,
       // publicPath: '/',
-
+      publicPath: process.env.NODE_ENV === 'production'
+      ? '/nombre-del-repositorio/' // Reemplaza 'nombre-del-repositorio' con el nombre real de tu repositorio
+      : '/',
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
       // Applies only if "transpile" is set to true.
